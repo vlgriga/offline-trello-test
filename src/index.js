@@ -1,0 +1,15 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/style.scss';
+import App from './components/App.jsx';
+import { Provider } from 'react-redux';
+import store from './store';
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('trello')
+);
+

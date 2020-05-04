@@ -1,0 +1,20 @@
+// BOARD
+export const ADD_BOARD = 'ADD_BOARD';
+export const REMOVE_BOARD = 'REMOVE_BOARD';
+export const EDIT_BOARD = 'EDIT_BOARD';
+export const CONNECT_LIST = 'CONNECT_LIST';
+export const DISCONNECT_LIST = 'DISCONNECT_LIST';
+
+// LIST
+export const ADD_LIST = 'ADD_LIST';
+export const REMOVE_LIST = 'REMOVE_LIST';
+export const SORT_CARD = 'SORT_CARD';
+export const CONNECT_CARD = 'CONNECT_CARD';
+export const DISCONNECT_CARD = 'DISCONNECT_CARD';
+export const REMOVE_CONNECTED_LISTS = 'REMOVE_CONNECTED_LISTS';
+
+
+// CARD
+export const ADD_CARD = 'ADD_CARD';
+export const REMOVE_CARD = 'REMOVE_CARD';
+export const REMOVE_CONNECTED_CARDS = 'REMOVE_CONNECTED_CARDS';

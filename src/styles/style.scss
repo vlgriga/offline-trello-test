@@ -1,0 +1,227 @@
+$white: #fff;
+$grey: #ebecf0;
+$green: #5aac44;
+$lightBlue: #34acbc;
+$black: #172b4d;
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+#trello {
+  // background-color: #b4d5f9;
+}
+
+.trello__container {
+  padding: 5px;
+  background-color: #b4d5f9;
+}
+
+.header {
+  height: 40px;
+  padding: 10px;
+  background-color: $white;
+  display: flex;
+  align-items: baseline;
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__navbar {
+    margin: 0 25px;
+  }
+}
+
+.boards {
+  &__list {
+    display: flex;
+    justify-content: left;
+    padding: 15px;
+  }
+
+  &__item {
+    display: flex;
+    width: 170px;
+    height: 170px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: $white;
+    text-align: center;
+    box-shadow: 1px 1px 3px rgba(9, 30, 66, 0.2);
+
+    &:hover {
+      background-color: $grey;
+    }
+
+    &__title {
+      display: inline-block;
+      color: $black;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    background-color: $grey;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+.board {
+  padding: 8px;
+
+  &__title {
+    font-size: 24px;
+    margin: 15px 5px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__list-button {
+    min-width: 272px;
+    border-radius: 3px;
+    max-height: 40px;
+    padding: 6px 8px;
+    margin: 4px;
+    text-align: left;
+    background-color: $grey;
+  }
+
+  &__add-button {
+    min-width: 272px;
+    border-radius: 3px;
+    max-height: 60px;
+    padding: 6px 8px;
+    margin: 4px;
+    text-align: left;
+    background-color: $grey;
+  }
+}
+
+.list {
+  width: 272px;
+  background-color: $grey;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  padding: 4px;
+  margin: 4px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      .list__button_remove {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__title {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+
+  &__card {
+    overflow: hidden;
+    padding: 8px 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    background-color: $white;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: $grey;
+      border: 1px solid #ccc;
+
+      .card__button_remove {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__card-button {
+    border: none;
+    color: #5e6c84;
+    display: block;
+    flex: 1 0 auto;
+    margin: 2px 0 8px 8px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(9, 30, 66, 0.08);
+      color: #172b4d;
+    }
+  }
+}
+
+.card {
+  &__title {
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.card-form {
+  height: 100%;
+  background-color: $grey;
+  padding: 5px;
+
+  &__details {
+    padding: 8px 4px;
+    margin-bottom: 8px;
+    background-color: $white;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  }
+
+  &__button {
+    color: $white;
+    margin: 8px 4px 0 0;
+    padding: 6px 12px;
+    border: 3px;
+    background-color: $lightBlue;
+
+    &_green {
+      background-color: $green;
+    }
+  }
+}
+
+.truncate {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space: nowrap;
+}
